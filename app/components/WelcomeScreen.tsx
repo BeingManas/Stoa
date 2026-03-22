@@ -23,21 +23,35 @@ export default function WelcomeScreen({ onSelectPrompt }: WelcomeScreenProps) {
 
   return (
     <div className="welcome">
-      <div className="welcome-icon" role="img" aria-label="Classical pillars">
-        🏛️
+      {/* Laurel wreath emblem */}
+      <div className="welcome-emblem">
+        <div className="welcome-icon" role="img" aria-label="Classical pillars">
+          🏛️
+        </div>
       </div>
+
       <h1 className="welcome-title">
         Meet <strong>Stoa</strong>
       </h1>
+
+      {/* Greek ornamental divider */}
+      <div className="welcome-divider">
+        <span className="welcome-divider-symbol">✦</span>
+      </div>
+
       <p className="welcome-description">
         Your personal Stoic philosophy guide. Drawing on the timeless wisdom of
         Marcus Aurelius, Epictetus, and Seneca — ask me anything about life,
         resilience, and inner peace.
       </p>
-      <p className="welcome-quote">&ldquo;{quote.text}&rdquo;</p>
-      <p className="welcome-quote-author">— {quote.author}</p>
 
-      <p className="welcome-prompts-label">Try asking</p>
+      {/* Quote with Greek corner accents */}
+      <div className="welcome-quote-block">
+        <p className="welcome-quote">&ldquo;{quote.text}&rdquo;</p>
+        <p className="welcome-quote-author">— {quote.author}</p>
+      </div>
+
+      <p className="welcome-prompts-label">Begin Your Inquiry</p>
       <div className="welcome-prompts">
         {SUGGESTED_PROMPTS.map((prompt) => (
           <button

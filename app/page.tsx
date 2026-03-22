@@ -50,7 +50,11 @@ export default function Home() {
 
   return (
     <main className="main">
-      {/* Header */}
+      {/* Decorative columns */}
+      <div className="column-left" aria-hidden="true" />
+      <div className="column-right" aria-hidden="true" />
+
+      {/* Header with Greek key border */}
       <header className="header">
         <div className="header-content">
           <div className="header-icon" role="img" aria-label="Stoa">
@@ -60,6 +64,9 @@ export default function Home() {
             <h1 className="header-title">Stoa</h1>
             <p className="header-subtitle">Stoic Philosophy Guide</p>
           </div>
+        </div>
+        <div className="header-border">
+          <div className="greek-border" />
         </div>
       </header>
 
